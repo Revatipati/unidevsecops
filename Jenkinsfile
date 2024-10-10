@@ -57,7 +57,7 @@ pipeline{
                 sh 'kubectl apply -f deploy1.yaml -f service.yaml'
                 sh 'kubectl get deploy,pod,service'
             }
-          
+        } 
     
     stage('upgrade'){
         steps{
@@ -66,7 +66,7 @@ pipeline{
         }
 
     }
-}
+
 
 }
 }
