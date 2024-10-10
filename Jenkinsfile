@@ -62,7 +62,7 @@ pipeline{
     stage('upgrade'){
         steps{
             echo 'upgrade'
-            sh 'kubectl set image deployment chrp-tomcat chrpjava=revatipatic1/srpingapp:tomcatdeploy$BUILD_NUMBER'
+            sh 'kubectl set image deployment chrp-tomcat srpingapp=revatipatic1/srpingapp:tomcatdeploy$BUILD_NUMBER'
         }
 
     }
