@@ -7,5 +7,5 @@ services:
       dockerfile:  Dockerfile # name of dockerfile
     container_name: chrpspringc1
     ports:
-    - 3053:5000  
+    - 3058:5000  
 # above steps have merging of build and run 
