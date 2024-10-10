@@ -43,5 +43,13 @@ pipeline{
                 }
             }
         }
+        stage('chck conn kubectl'){
+            steps{
+                echo 'kubectl version cmd'
+                sh 'kubectl get nodes'
+                sh 'kubectl version'
+            }
+
+        }
     }
 }

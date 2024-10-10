@@ -5,6 +5,6 @@ metadata:
 spec: 
   containers:
   - name: chrpc1 
-    image: revatipatic1/chrpjava:tomcatdeploy5
+    image: revatipatic1/srpingapp:tomactdep40
     ports:
     - containerPort: 8080

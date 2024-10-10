@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: chrp-tomcat
+  name: chrp-tomcat
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: chrp-tomcat
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: chrp-tomcat
+    spec:
+      containers:
+      - image: revatipatic1/srpingapp:tomactdep40
+        name: srpingapp
+        ports:
+        - containerPort: 8080
+        resources: {}
+status: {}
