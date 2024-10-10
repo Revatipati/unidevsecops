@@ -57,6 +57,14 @@ pipeline{
                 sh 'kubectl apply -f deploy1.yaml -f service.yaml'
                 sh 'kubectl get deploy,pod,service'
             }
-        }
+          
     }
+    stage('upgrade'){
+        steps{
+            echo 'upgrade'
+            sh 'kubectl set image deployment chrp-tomcat chrpjava=revatipatic1/srpingapp:tomcatdeploy$BUILD_NUMBER'
+        }
+
+    }
+
 }
