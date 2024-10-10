@@ -51,5 +51,12 @@ pipeline{
             }
 
         }
+        stage('deployment'){
+            steps{
+                echo 'deployment'
+                sh 'kubectl apply -f deploy1.yaml -f service.yaml'
+                sh 'kubectl get deploy,pod,service'
+            }
+        }
     }
 }
