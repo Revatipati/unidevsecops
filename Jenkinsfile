@@ -9,7 +9,7 @@ pipeline{
             }
 
         }
-        stage('SAST using trivy for vuln scan'){
+        stage('SAST using trivy for vuln scaning'){
             steps{
                 echo 'SAST using trivy for vuln'
                 sh 'trivy fs --scanners vuln,secret,misconfig .'            
